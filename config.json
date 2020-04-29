@@ -1,17 +1,8 @@
 {
-  "description": "sshFS plugin for Docker",
+  "description": "sshfs plugin for Docker",
   "documentation": "https://docs.docker.com/engine/extend/plugins/",
   "entrypoint": [
-    "/docker-volume-sshfs"
-  ],
-  "env": [
-    {
-      "name": "DEBUG",
-      "settable": [
-        "value"
-      ],
-      "value": "0"
-    }
+    "/docker-sshfs"
   ],
   "interface": {
     "socket": "sshfs.sock",
@@ -47,7 +38,7 @@
       "options": [
         "rbind"
       ],
-      "name": "sshkey",
+      "name": "ssh",
       "source": "",
       "settable": [
         "source"
